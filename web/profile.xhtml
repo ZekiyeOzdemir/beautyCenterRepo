@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <title>Profile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+ 
+    
+    
+    <body>
+        
+        <h:form>
+            
+        <h2>Merhaba, <h:outputText value="#{loginBean.customer.name} #{loginBean.customer.lastname} "></h:outputText></h2> 
+        <h:outputText value="Şifre değiştir:"></h:outputText>
+        <h:inputText id="newpassword" value="#{loginBean.newpassword}"  />
+        <h:commandButton type="submit" action="#{loginBean.sifredegis()}"   value="Kaydet"> </h:commandButton>
+        <hr></hr>
+        <h:commandButton type="submit" action="#{loginBean.logout()}"   value="Çıkış Yap"> </h:commandButton>
+        <hr></hr>
+       
+        </h:form>
+        
+    </body>
+</html>
